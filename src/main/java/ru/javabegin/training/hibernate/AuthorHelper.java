@@ -6,10 +6,7 @@ import ru.javabegin.training.hibernate.entity.Author;
 import ru.javabegin.training.hibernate.entity.Author_;
 
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-import javax.persistence.criteria.Selection;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 
@@ -28,8 +25,6 @@ public class AuthorHelper {
         // открыть сессию - для манипуляции с персист. объектами
         Session session = sessionFactory.openSession();
 
-        session.get(Author.class, 1L); // получение объекта по id
-
         // этап подготовки запроса
 
         // объект-конструктор запросов для Criteria API
@@ -41,11 +36,19 @@ public class AuthorHelper {
 
         Selection[] selection = {root.get(Author_.id), root.get(Author_.name)}; // выборка полей, в классе Author должен быть конструктор с этими параметрами
 
-        cq.select(cb.construct(Author.class, selection));// необязательный оператор, если просто нужно получить все значения
+        ParameterExpression<String> nameParam = cb.parameter(String.class,"name"); // создали параметр
+
+//        cq.select(cb.construct(Author.class, selection));// необязательный оператор, если просто нужно получить все значения
+     // параметр будет применяться к полю Author_.name like это не строго равно
+        cq.select(cb.construct(Author.class, selection))
+                .where(cb.like(root.get(Author_.name), nameParam));
+
 
 
         // этап выполнения запроса
         Query query = session.createQuery(cq);
+//        query.setParameter("name","%1%"); // все имена где есть параметр 1
+        query.setParameter("name","%имя%"); // все имена где есть параметр 1
 
         List<Author> authorList = query.getResultList();
 
