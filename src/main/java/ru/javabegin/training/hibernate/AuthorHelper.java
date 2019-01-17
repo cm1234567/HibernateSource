@@ -82,13 +82,27 @@ public class AuthorHelper {
     }
 
     public void delete(){
+
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-// одиночное удаление строки по id = 201
-        Author a = session.get(Author.class, 201L);
+        // объект-конструктор запросов для Criteria API
+        CriteriaBuilder cb = session.getCriteriaBuilder();// не использовать session.createCriteria, т.к. deprecated
 
-        session.delete(a);
+        CriteriaDelete<Author> criteriaDelete = cb.createCriteriaDelete(Author.class);
+
+        Root<Author> root = criteriaDelete.from(Author.class);// первостепенный, корневой entity (в sql запросе - from)
+
+        ParameterExpression<String> nameParam = cb.parameter(String.class,"name"); // создали параметр
+
+        // нет select, сразу where так как мы делаем удаление
+        criteriaDelete.where(cb.like(root.get(Author_.name),nameParam));
+
+        // этап выполнения запроса
+        Query query = session.createQuery(criteriaDelete);
+        query.setParameter("name","%1%"); // все имена где есть параметр 1
+
+        query.executeUpdate();
 
         session.getTransaction().commit();
 

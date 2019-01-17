@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a390862b-360d-4d8b-a201-906e9734bb63" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="385">
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,7 +200,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="8f58c8eb-9522-43df-bd72-31814a5f7a95" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547743782686" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547744997255" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -301,12 +300,12 @@
       <updated>1547726771641</updated>
       <workItem from="1547726773340" duration="3147000" />
       <workItem from="1547735821927" duration="1063000" />
-      <workItem from="1547739919286" duration="3241000" />
+      <workItem from="1547739919286" duration="4372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7451000" />
+    <option name="totallyTimeSpent" value="8582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="733" extended-state="6" />
@@ -323,7 +322,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49878544" weight="0.82421225" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30679932" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41293532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -364,9 +363,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java</url>
-          <line>90</line>
+          <line>108</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -401,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://8f58c8eb-9522-43df-bd72-31814a5f7a95/database/TESTHIBERNATE/schema/PUBLIC/table/AUTHOR">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -415,10 +407,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://8f58c8eb-9522-43df-bd72-31814a5f7a95/database/TESTHIBERNATE/schema/PUBLIC/table/AUTHOR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="385">
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
