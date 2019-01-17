@@ -94,17 +94,25 @@ public class AuthorHelper {
         Root<Author> root = criteriaDelete.from(Author.class);// первостепенный, корневой entity (в sql запросе - from)
 
         ParameterExpression<String> nameParam = cb.parameter(String.class,"name"); // создали параметр
+        ParameterExpression<String> secondNameParam = cb.parameter(String.class,"secondName"); // создали параметр
 
         // нет select, сразу where так как мы делаем удаление
-        criteriaDelete.where(cb.like(root.get(Author_.name),nameParam));
+        criteriaDelete.where(cb.or(
+                cb.and(cb.like(root.get(Author_.name), nameParam),
+                        cb.like(root.get(Author_.secondName), secondNameParam)
+                ),
+                cb.equal(root.get(Author_.name), "sec_name83")
+                )
+        );
 
         // этап выполнения запроса
         Query query = session.createQuery(criteriaDelete);
-        query.setParameter("name","%1%"); // все имена где есть параметр 1
+        query.setParameter("name","%2%"); // все имена где есть параметр 1
+        query.setParameter("secondName","%t%"); // все имена где есть параметр 1
 
         query.executeUpdate();
 
-        session.getTransaction().commit();
+//        session.getTransaction().commit();
 
         session.close();
     }
