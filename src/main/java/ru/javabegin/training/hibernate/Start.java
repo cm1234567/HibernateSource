@@ -9,7 +9,8 @@ public class Start {
 
     public static void main(String[] args) {
 
-        new AuthorHelper().getAuthorList();
+//        new AuthorHelper().getAuthorList();
+        new AuthorHelper().delete();
     }
 
 }

@@ -81,6 +81,20 @@ public class AuthorHelper {
 
     }
 
+    public void delete(){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+// одиночное удаление строки по id = 201
+        Author a = session.get(Author.class, 201L);
+
+        session.delete(a);
+
+        session.getTransaction().commit();
+
+        session.close();
+    }
+
     public Author getAuthor(String name){
         return null;
     }
