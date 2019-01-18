@@ -13,14 +13,13 @@ import java.util.List;
 public class AuthorHelper {
 
 
-
     private SessionFactory sessionFactory;
 
     public AuthorHelper() {
         sessionFactory = HibernateUtil.getSessionFactory();
     }
 
-    public List<Author> getAuthorList(){
+    public List<Author> getAuthorList() {
 
         // открыть сессию - для манипуляции с персист. объектами
         Session session = sessionFactory.openSession();
@@ -36,19 +35,18 @@ public class AuthorHelper {
 
         Selection[] selection = {root.get(Author_.id), root.get(Author_.name)}; // выборка полей, в классе Author должен быть конструктор с этими параметрами
 
-        ParameterExpression<String> nameParam = cb.parameter(String.class,"name"); // создали параметр
+        ParameterExpression<String> nameParam = cb.parameter(String.class, "name"); // создали параметр
 
 //        cq.select(cb.construct(Author.class, selection));// необязательный оператор, если просто нужно получить все значения
-     // параметр будет применяться к полю Author_.name like это не строго равно
+        // параметр будет применяться к полю Author_.name like это не строго равно
         cq.select(cb.construct(Author.class, selection))
                 .where(cb.like(root.get(Author_.name), nameParam));
-
 
 
         // этап выполнения запроса
         Query query = session.createQuery(cq);
 //        query.setParameter("name","%1%"); // все имена где есть параметр 1
-        query.setParameter("name","%имя%"); // все имена где есть параметр 1
+        query.setParameter("name", "%имя%"); // все имена где есть параметр 1
 
         List<Author> authorList = query.getResultList();
 
@@ -59,15 +57,15 @@ public class AuthorHelper {
     }
 
     // добавляют нового автора в таблица Author
-    public Author addAuthor(Author author){
+    public Author addAuthor(Author author) {
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        for (int i=1; i<=200; i++){
-            Author a = new Author("name"+i);
-            a.setSecondName("sec_name"+i);
-            if (i % 20==0){
+        for (int i = 1; i <= 200; i++) {
+            Author a = new Author("name" + i);
+            a.setSecondName("sec_name" + i);
+            if (i % 20 == 0) {
                 session.flush();
             }
             session.save(a); // сгенерит ID и вставит в объект
@@ -81,7 +79,7 @@ public class AuthorHelper {
 
     }
 
-    public void delete(){
+    public void delete() {
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -93,8 +91,8 @@ public class AuthorHelper {
 
         Root<Author> root = criteriaDelete.from(Author.class);// первостепенный, корневой entity (в sql запросе - from)
 
-        ParameterExpression<String> nameParam = cb.parameter(String.class,"name"); // создали параметр
-        ParameterExpression<String> secondNameParam = cb.parameter(String.class,"secondName"); // создали параметр
+        ParameterExpression<String> nameParam = cb.parameter(String.class, "name"); // создали параметр
+        ParameterExpression<String> secondNameParam = cb.parameter(String.class, "secondName"); // создали параметр
 
         // нет select, сразу where так как мы делаем удаление
         criteriaDelete.where(cb.or(
@@ -107,8 +105,8 @@ public class AuthorHelper {
 
         // этап выполнения запроса
         Query query = session.createQuery(criteriaDelete);
-        query.setParameter("name","%2%"); // все имена где есть параметр 1
-        query.setParameter("secondName","%t%"); // все имена где есть параметр 1
+        query.setParameter("name", "%2%"); // все имена где есть параметр 1
+        query.setParameter("secondName", "%t%"); // все имена где есть параметр 1
 
         query.executeUpdate();
 
@@ -117,10 +115,39 @@ public class AuthorHelper {
         session.close();
     }
 
-    public Author getAuthor(String name){
+    public void update() {
+
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        // объект-конструктор запросов для Criteria API
+        CriteriaBuilder cb = session.getCriteriaBuilder();// не использовать session.createCriteria, т.к. deprecated
+
+        CriteriaUpdate<Author> criteriaUpdate = cb.createCriteriaUpdate(Author.class);
+
+        Root<Author> root = criteriaUpdate.from(Author.class);// первостепенный, корневой entity (в sql запросе - from)
+
+        ParameterExpression<String> nameParam = cb.parameter(String.class, "name");
+
+        Expression<Integer> length = cb.length(root.get(Author_.secondName));
+
+        criteriaUpdate.set(root.get(Author_.name),nameParam).
+                where(cb.greaterThan(length,5)
+                );
+
+        // этап выполнения запроса
+        Query query = session.createQuery(criteriaUpdate);
+        query.setParameter("name", "1");
+
+        query.executeUpdate(); // вместо возврата результата - используется метод обновления
+
+        session.getTransaction().commit();
+
+        session.close();
+    }
+
+    public Author getAuthor(String name) {
         return null;
     }
 
-
-    
 }
