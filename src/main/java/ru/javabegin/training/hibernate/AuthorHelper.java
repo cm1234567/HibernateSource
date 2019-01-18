@@ -132,12 +132,12 @@ public class AuthorHelper {
         Expression<Integer> length = cb.length(root.get(Author_.secondName));
 
         criteriaUpdate.set(root.get(Author_.name),nameParam).
-                where(cb.greaterThan(length,5)
+                where(cb.equal(length,9)
                 );
 
         // этап выполнения запроса
         Query query = session.createQuery(criteriaUpdate);
-        query.setParameter("name", "1");
+        query.setParameter("name", "1111");
 
         query.executeUpdate(); // вместо возврата результата - используется метод обновления
 
