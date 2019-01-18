@@ -64,10 +64,21 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="16" parent="6" name="CONSTRAINT_1">
+    <index id="16" parent="6" name="FK_AUTHOR_INDEX_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AUTHOR_ID</ColNames>
+    </index>
+    <key id="17" parent="6" name="CONSTRAINT_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="18" parent="6" name="FK_AUTHOR">
+      <ColNames>AUTHOR_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>AUTHOR</RefTableName>
+      <RefKeyName>CONSTRAINT_7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

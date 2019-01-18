@@ -11,7 +11,8 @@ public class Start {
 
 //        new AuthorHelper().getAuthorList();
 //        new AuthorHelper().delete();
-        new AuthorHelper().update();
+//        new AuthorHelper().update();
+        new BookHelper().getBookList();
     }
 
 }

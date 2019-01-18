@@ -5,10 +5,7 @@ import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -24,6 +21,8 @@ public class Book implements Serializable{
 
     private String name;
 
-    private long author_id;
+    @ManyToOne                // для FOREIGN
+    @JoinColumn               // связать поле с конкретным обьектом типа Author
+    private Author author;
 
 }
