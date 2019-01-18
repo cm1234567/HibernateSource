@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a390862b-360d-4d8b-a201-906e9734bb63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f58c8eb-9522-43df-bd72-31814a5f7a95.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8f58c8eb-9522-43df-bd72-31814a5f7a95.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -98,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+            <state relative-caret-position="110">
+              <caret line="153" selection-start-line="153" selection-end-line="153" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,10 +109,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="31" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -119,26 +129,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/BookHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
+            <state relative-caret-position="280">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://8f58c8eb-9522-43df-bd72-31814a5f7a95/database/TESTHIBERNATE/schema/PUBLIC/table/BOOK">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+            <state relative-caret-position="232">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="25" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,15 +156,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="width" value="3150" />
     <option name="height" value="1700" />
@@ -231,7 +232,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="8f58c8eb-9522-43df-bd72-31814a5f7a95" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547818288862" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547821216958" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -336,13 +337,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13333000" />
+    <option name="totallyTimeSpent" value="16296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="733" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49751243" visible="true" weight="0.24210526" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49751243" visible="true" weight="0.19190283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50248754" side_tool="true" weight="0.2534413" />
@@ -352,8 +353,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49878544" weight="0.37147596" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.6384743" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49878544" weight="0.5588723" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32006633" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -375,7 +376,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.32955465" />
-      <window_info active="true" anchor="right" id="Database" order="7" visible="true" weight="0.32955465" />
+      <window_info anchor="right" id="Database" order="7" weight="0.20890689" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -397,6 +398,12 @@
           <line>45</line>
           <properties />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java</url>
+          <line>153</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -424,13 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/462dff65f6f8bde02ee9d8afe07fe9d50268199c/javax.persistence-api-2.2-sources.jar!/javax/persistence/criteria/CriteriaBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -442,16 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -469,34 +459,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java">
+    <entry file="das://8f58c8eb-9522-43df-bd72-31814a5f7a95/database/TESTHIBERNATE/schema/PUBLIC/table/BOOK">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/BookHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+        <state relative-caret-position="280">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="31" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/AuthorHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/Start.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/entity/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javabegin/training/hibernate/BookHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://8f58c8eb-9522-43df-bd72-31814a5f7a95/database/TESTHIBERNATE/schema/PUBLIC/table/BOOK">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="232">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

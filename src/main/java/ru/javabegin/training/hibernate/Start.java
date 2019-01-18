@@ -12,7 +12,9 @@ public class Start {
 //        new AuthorHelper().getAuthorList();
 //        new AuthorHelper().delete();
 //        new AuthorHelper().update();
-        new BookHelper().getBookList();
+//        new BookHelper().getBookList();
+
+        new AuthorHelper().getAuthor(202);
     }
 
 }

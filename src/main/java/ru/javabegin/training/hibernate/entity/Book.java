@@ -21,8 +21,8 @@ public class Book implements Serializable{
 
     private String name;
 
-    @ManyToOne                // для FOREIGN
-    @JoinColumn               // связать поле с конкретным обьектом типа Author
+    @ManyToOne (fetch = FetchType.EAGER)               // для FOREIGN, много книг может принадлежать одному автору
+    @JoinColumn (name = "author_id")               // связать поле с конкретным обьектом типа Author
     private Author author;
 
 }
